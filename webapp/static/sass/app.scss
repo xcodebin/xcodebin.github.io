@@ -1,0 +1,197 @@
+/*use*/
+.ui.modal.use {
+  .content.ui.form{
+    width: auto;
+    .field{
+      .text{
+        color: #888;
+        text-align: left;
+      }
+    }
+  }
+  .ui.ordered.steps{
+    .content{
+      text-align: left;
+      .title~.description{
+        width: 88px;
+        height: 18px;
+        line-height: 18px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.the-so-none{
+  .param-title {
+    .the-table-fr {
+      width: auto !important;
+    }
+  }
+}
+.the-so-block{
+  .the-table-fr{
+    width: 100px!important;
+    position: absolute;
+    top: -40px;
+    right: 68px;
+
+    }
+  }
+.but-top{
+  .ui.basic.buttons{
+    position: absolute;
+    top: -37px;
+    right: 15px;
+  }
+  .the-table-tool{
+    padding: 0!important;
+  }
+}
+.card-header {
+  line-height: 3rem !important;;
+  font-size: 1em !important;
+}
+.content.tree-content {
+  height: 300px;
+}
+.use-up{
+  .ui.card{
+    width: 100%!important;
+    .header{
+      margin-top: 10px!important;
+    }
+  }
+}
+.inputText{
+  a.label{
+    border: 1px solid #d4d4d4;
+  }
+}
+.the-sou{
+  .the-table-fr{
+    width: auto!important;
+  }
+}
+.the-tree{
+  margin-top: 20px;
+  .the-sou{
+    width: 100px!important;
+  }
+
+}
+.ui.input{
+  .inputClick{
+    width: 380px!important;
+  }
+}
+.rimg{
+  height: 290px;
+  overflow: hidden;
+    .ui.image{
+      width: 200px;
+      height: 200px;
+      position:absolute;
+      left: 50%;
+      margin-left: -100px;
+      top:50%;
+      margin-top: -100px;
+    }
+}
+.upload-res {
+  .upload-input {
+    width: 270px !important;
+  }
+  .progress {
+    margin-bottom: 0;
+    margin-top: 7px;
+    display: inline-block;
+    width: 223px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+}
+
+.upload-res {
+  .upload-input {
+    width: 270px !important;
+  }
+  .progress {
+    margin-bottom: 7px;
+    margin-top: 7px;
+    display: inline-block;
+    width: 223px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+}
+
+.upload-fluid {
+  .progress {
+    margin-bottom: 7px;
+    margin-top: 7px;
+    display: inline-block;
+    text-align: center;
+    width: 780px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+}
+
+.upload-half {
+  .progress {
+    margin-bottom: 7px;
+    margin-top: 7px;
+    display: inline-block;
+    text-align: center;
+    width: 390px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+}
+
+.search-tree{
+  width: 200px !important;
+}
+
+.ui.card.raised{
+  .h30{
+   margin-top: 5px;
+    font-size:12px;
+  }
+}
+.mCS-dark.mCSB_scrollTools {
+  .mCSB_draggerRail{
+    background:#fff;
+  }
+}
+.p23{
+  padding-top: 23px;
+}
+
+  .p10{
+    .vendor-container{
+      .top.attached{
+        th{
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+.on-wrapp{
+  .ui.form .field .prompt.label{
+    top: -15px;
+  }
+}
+.ui{
+  &.form {
+    .field:last-child {
+      &.m-b-14{
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
+.centeres{
+  text-align: center;
+}

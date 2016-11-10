@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="dev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>智能终端开发者开放平台</title>
+    <link rel="stylesheet" href="../../static/lib/all/all.min.css" />
+    <link rel="stylesheet" href="../../static/css/dev.min.css" />
+    <link rel="stylesheet" href="../../static/css/index.css" />
+</head>
+<body class="index">
+<!-- 头部 -->
+<div class="ui vertical masthead center aligned os-top">
+    <div class="ui menu">
+        <a class="toc item" id="home_id" href="index">
+            <b class="os-Logo"></b>
+            <span>智能终端开发者开放平台</span>
+        </a>
+        <a href="api" id="api_id" class="item" data-root="api_01_001">开发资料</a>
+        <a href="soft" id="soft_id" class="item" data-root="api_01_001">软件工具</a>
+        <a href="app/appList" class="item">服务</a>
+        <a href="#" class="item">在线开发</a>
+        <a href="#" class="item">开发者论坛</a>
+        <div class="right item">
+                <span id="alLogin" style="display: none;" class="r">
+                    <a href="javascript:" class="ind-hd-span" id="loginStatus" >
+                        <span class="ui info-image" ids="loginStatus">
+                            <img class="ui avatar image" ids="usinLitHeadIco" onerror="window.ld_common.errorImage(this,'litHeader')" src="http://semantic-ui.com/images/avatar2/large/matthew.png">
+                        </span>
+                    </a>
+                    <a href="logout" class="ui inverted button">退出</a>
+                </span>
+                <span id="withOutLogin" class="r">
+                    <a href="login" id="user_login" class="ui inverted button">登录</a>
+                </span>
+                 <span id="user_register" class="r">
+                    <a href="javascript:;" ids="registerBtn" class="ui inverted button">注册</a>
+                </span>
+        </div>
+    </div>
+</div>
+
+<!-- 轮播 -->
+<div class="carousel">
+    <div class="banner"><span><img src="" alt=""></span></div>
+</div>
+
+<!-- 四块链接 -->
+<div class="os-wrapp clearfix">
+    <div class="w1190">
+        <ul id="oswrap">
+        </ul>
+    </div>
+</div>
+
+<!-- 开发资料，软件工具 -->
+<div class="os-contact" style="*margin-top:30px;">
+    <div class="w1190 clearfix">
+        <!--在线资料-->
+        <div class="os-android">
+            <em class="os-titleT"></em>
+            <span class="os-title">在线资料</span>
+            <a href="javascript:;" id="apiViewMore" class="r view-more">查看更多</a>
+            <ul id="informapiList">
+            </ul>
+        </div>
+        <!--软件工具-->
+        <div class="os-software">
+            <em class="os-titleT"></em>
+            <span class="os-title">软件资料</span>
+            <a href="javascript:;" id="softViewMore" class="r view-more">查看更多</a>
+            <ul id="informapiListTool">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+    <p class="rights">银联商务 版权所有 沪ICP备05003469号<br/>地址：上海浦东新区张衡路1006号  邮编：201203电话：021-61088288  传真：021-61088289  联系邮箱：<a href="mailto:office@chinaums.com">office@chinaums.com</a></p>
+</div>
+
+
+<div class="modal ui small" style="height: 286px;" id="registerModal">
+    <i class="icon close black"></i>
+    <div class="header">注册账号</div>
+    <div class="content">
+        <a href="javascript:;" id="dev_register" class="ui button black the-form-btn">
+            <h3>开发者注册</h3>
+            <p>可下载开发资料和工具</p>
+        </a>
+        <div class="ui divider hidden"></div>
+        <a href="javascript:;" id="sp_register" class="ui button blue the-form-btn">
+            <h3>服务提供商注册</h3>
+            <p>可提交应用程序</p>
+        </a>
+    </div>
+</div>
+<div id="userDataGrid"></div>
+<script src="../../static/lib/all/all.min.js"></script>
+<!--公共包-->
+<script src="../../static/js_lib/tool/jsonTool.js"></script>
+<script src="../../static/js_lib/ui/datagrid.js"></script>
+<script src="../../static/js_lib/ui/scrollbar.js"></script>
+<script src="../../static/js_lib/ui/alert.js"></script>
+<script src="../../static/js_lib/ui/droptree.js"></script>
+<!-- / 公共包-->
+<!--<script src="../../static/js/common.js"></script>-->
+<!--<script src="../../static/js/index.js"></script>-->
+</body>
+</html>

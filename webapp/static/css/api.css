@@ -1,0 +1,63 @@
+.on-wrapp {
+  /*menu right*/ }
+  .on-wrapp .on-menuR .pr-title {
+    height: 40px;
+    line-height: 40px;
+    background: #f7f8f9;
+    font-weight: bold;
+    font-size: 16px;
+    border-left: 3px solid #1976e6;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    cursor: pointer; }
+    .on-wrapp .on-menuR .pr-title:hover {
+      background: #eaf4fc; }
+    .on-wrapp .on-menuR .pr-title em {
+      display: inline-block;
+      background: url(../../static/img/OpenSer.png) no-repeat;
+      float: right;
+      margin: 17px 15px 0 0;
+      cursor: pointer; }
+    .on-wrapp .on-menuR .pr-title .pr-down {
+      width: 10px;
+      height: 6px;
+      background-position: 0 -144px; }
+    .on-wrapp .on-menuR .pr-title .pr-up {
+      width: 6px;
+      height: 10px;
+      background-position: -13px -144px;
+      margin: 15px 15px 0 0; }
+  .on-wrapp .on-menuR .cirIcon {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: url(../../static/img/OpenSer.png) 0 -154px no-repeat;
+    vertical-align: middle;
+    margin-right: 10px; }
+  .on-wrapp .on-menuR .pr-p1 {
+    color: #666;
+    line-height: 25px; }
+  .on-wrapp .on-menuR .ap-dash {
+    border: none;
+    border-top: 1px dashed #e2e3e4;
+    margin: 20px 0; }
+  .on-wrapp .on-menuR .api-table {
+    border: none; }
+    .on-wrapp .on-menuR .api-table td:first-child {
+      width: 15%; }
+    .on-wrapp .on-menuR .api-table td:last-child {
+      width: 15%; }
+    .on-wrapp .on-menuR .api-table td {
+      border: none;
+      padding: 5px 20px;
+      width: 22%;
+      display: inline-block;
+      height: 50px;
+      overflow: hidden;
+      line-height: 50px;
+      text-overflow: ellipsis; }
+    .on-wrapp .on-menuR .api-table .api-img {
+      width: 45px;
+      overflow: hidden; }
+
+/*# sourceMappingURL=api.css.map */
