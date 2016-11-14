@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>按键盘上下左右移动竖杆，不能让小球移动到左边</h1>
+<canvas id="clock" width="1200" height="500">
+    您的浏览器不支持canvas
+</canvas><br>
+<span id="time-span"></span>
+
+<script>
+    CanvasRenderingContext2D.prototype.fillArc = function (x, y, radius, startAngle, endAngle, anticlockwise) {
+        this.beginPath();
+        startAngle == null && (startAngle = 0);
+        endAngle == null && (endAngle = 2 * Math.PI);
+        anticlockwise == null && (anticlockwise = false);
+        this.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+        this.fill();
+        this.closePath();
+    };
+    var clockCanvas = document.querySelector("#clock");
+    var ctx = clockCanvas.getContext("2d");
+    var view = {
+        width: 1200,
+        height: 500
+    };
+    var ball = {
+        x: 100 + Math.random() * 1000,
+        y: 10,
+        r: 10,
+        vx: 3,
+        vy: 3,
+        g: 0,
+        a: 0.01
+    };
+    /*定义挡板*/
+    var baffle = {
+        left: {
+            x1: 30,
+            y1: 100,
+            x2: 70,
+            y2: 400
+        }
+        ,
+        right: {
+            x1: 33,
+            y1: 100,
+            x2: 70,
+            y2: 500
+        }
+    };
+    var timer = setInterval(function () {
+
+        ctx.clearRect(0, 0, view.width, view.height);
+        /*花挡板*/
+        function drawElement() {
+            var leftwidth = baffle.left.x2 - baffle.left.x1;
+            var leftheight = baffle.left.y2 - baffle.left.y1;
+            ctx.fillRect(baffle.left.x1, baffle.left.y1, leftwidth, leftheight);
+        }
+
+
+        var v0 = ball.vy;
+        var v1 = v0 + ball.g * 1;
+        ball.vy = v1;
+        ball.y += v1;
+        ball.x += ball.vx;
+        if (ball.vx > 0) {
+            ball.vx += ball.a;
+        } else {
+            ball.vx -= ball.a;
+        }
+        /*判断*/
+        function onBarrier() {
+            if (ball.y >= view.height - ball.r) {
+                ball.y = view.height - ball.r;
+
+
+                ball.vy = -ball.vy
+            }
+            if (ball.y <= ball.r) {
+                ball.y = ball.r;
+
+
+                ball.vy = -ball.vy
+            }
+            ball.x += ball.vx;
+            if (ball.x >= view.width - ball.r) {
+                ball.x = view.width - ball.r;
+
+
+                ball.vx = -ball.vx
+            }
+            if (ball.x <= ball.r) {
+                ball.x = ball.r;
+
+
+                clearInterval(timer);
+                alert('输了^ - ^ ')
+                ball.vx = -ball.vx
+            }
+            ctx.fillArc(ball.x, ball.y, ball.r);
+            /*左侧挡板*/
+            if (ball.y >= baffle.left.y1 && ball.y <= baffle.left.y2) {
+                if (ball.x <= baffle.left.x2) {
+                    ball.x = baffle.left.x2;
+                    ball.vx = -ball.vx;
+                }
+            }
+
+        }
+
+        onBarrier();
+        drawElement();
+    }, 10);
+    // ctx.fillArc(ball.x, ball.y, ball.r);
+    document.onkeydown = function (e) {
+        var keycode = e.keyCode;
+        /*
+         keycode 37 = Left ←
+         keycode 38 = Up ↑
+         keycode 39 = Right →
+         keycode 40 = Down ↓
+         */
+        if (keycode == 37) {
+            if (baffle.left.x1 <= 0) {
+                baffle.left.x1 = 0
+            } else {
+                baffle.left.x1 -= 30;
+                baffle.left.x2 -= 30
+            }
+
+        }
+        if (keycode == 38) {
+            if (baffle.left.y1 <= 0) {
+                baffle.left.y1 = 0
+            } else {
+                baffle.left.y1 -= 30;
+                baffle.left.y2 -= 30
+            }
+
+        }
+        if (keycode == 39) {
+            if (baffle.left.x2 >= 600) {
+                baffle.left.x2 = 600
+            } else {
+                baffle.left.x1 += 30;
+                baffle.left.x2 += 30
+            }
+        }
+        if (keycode == 40) {
+            if (baffle.left.y2 >= 500) {
+                baffle.left.y2 = 500
+            } else {
+                baffle.left.y1 += 30;
+                baffle.left.y2 += 30
+            }
+
+        }
+
+    };
+</script>
+</body>
+</html>
