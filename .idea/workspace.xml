@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b35ed3d-cde6-4d37-8a7c-e9e0ca5f6574" name="默认" comment="aaaa">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icon.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="7b35ed3d-cde6-4d37-8a7c-e9e0ca5f6574" name="默认" comment="" />
     <list id="696a142b-1990-441b-90ad-19838ec86874" name="New changelist" comment="New changelist" />
     <ignored path="xcodebin.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,17 +24,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/view/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2071">
+            <state relative-caret-position="339">
               <caret line="109" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -242,7 +238,7 @@
       <updated>1478792201389</updated>
       <workItem from="1478792202728" duration="2917000" />
       <workItem from="1479088067984" duration="58000" />
-      <workItem from="1479111160840" duration="62000" />
+      <workItem from="1479111160840" duration="155000" />
     </task>
     <task id="LOCAL-00001" summary="aaaa">
       <created>1478792257167</created>
@@ -286,11 +282,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478795332615</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="aaaa">
+      <created>1479111233297</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1479111233297</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3037000" />
+    <option name="totallyTimeSpent" value="3130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="784" extended-state="6" />
@@ -369,18 +372,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/view/html/appEdit.html" />
-    <entry file="file://$PROJECT_DIR$/webapp/view/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2071">
-          <caret line="109" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="109" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
           <folding />
         </state>
       </provider>
