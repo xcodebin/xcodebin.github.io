@@ -259,7 +259,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-bg-dark {
   background: #2F3C4F;
-  background: #707073; }
+  background: #707073;
+  background-size: cover; }
   .fh5co-bg-dark .fh5co-heading h2 {
     color: #fff !important; }
 
@@ -628,6 +629,63 @@ h1, h2, h3, h4, h5, h6, figure {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
     .work:hover .desc span {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+
+.works {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 150px;
+  width: 100%;
+  display: table;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .works {
+      height: 400px; } }
+  @media screen and (max-width: 480px) {
+    .works {
+      height: 150px; } }
+  .works .desc {
+    display: table-cell;
+    vertical-align: middle;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .works .desc h3 {
+      font-size: 20px;
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0); }
+    .works .desc span {
+      display: block;
+      color: #999999;
+      font-size: 14px;
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+      -webkit-transform: translate3d(0, 15px, 0);
+      transform: translate3d(0, 15px, 0); }
+    @media screen and (max-width: 768px) {
+      .works .desc {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.6); }
+        .works .desc h3 {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+        .works .desc span {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); } }
+  .works:hover .desc {
+    opacity: 1; }
+    .works:hover .desc h3 {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+    .works:hover .desc span {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
 

@@ -372,6 +372,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-bg-dark{
 	background: $brand-bg-dark;
 	background: $brand-primary;
+  background-size: cover;
 	.fh5co-heading{
 		h2{
 			color: $brand-white !important;
@@ -806,7 +807,72 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 }
-
+// WORK
+.works{
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 150px;
+  width: 100%;
+  display: table;
+  overflow: hidden;
+  @media screen and(max-width: $screen-sm){
+    height: 400px;
+  }
+  @media screen and(max-width: $screen-xs){
+    height: 150px;
+  }
+  .desc{
+    display: table-cell;
+    vertical-align: middle;
+    height: 150px;
+    background: rgba($brand-white,.8);
+    opacity: 0;
+    @include transition(.3s);
+    h3{
+      font-size: 20px;
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+    span{
+      display: block;
+      color: lighten($brand-black,60%);
+      font-size: 14px;
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+      -webkit-transform: translate3d(0, 15px, 0);
+      transform: translate3d(0, 15px, 0);
+    }
+    @media screen and(max-width: $screen-sm){
+      opacity: 1;
+      background: rgba($brand-white,.6);
+      h3{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      span{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+  &:hover{
+    .desc{
+      opacity: 1;
+      h3{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      span{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
 #fh5co-started {
 	background-size: cover;
 	background-position: center center;
