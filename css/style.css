@@ -692,7 +692,103 @@ h1, h2, h3, h4, h5, h6, figure {
 .my-skills {
   width: 100%; }
 
+.stage {
+  height: 490px;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(100, 100, 100, 0.6) 0%, rgba(255, 255, 255, 0.2) 40%, #ffffff 100%);
+  -webkit-perspective: 2400px;
+  -moz-perspective: 2400px;
+  -ms-perspective: 2400px;
+  -o-perspective: 2400px;
+  perspective: 2400px;
+  -webkit-perspective-origin: 50% 60%;
+  -moz-perspective-origin: 50% 60%;
+  -ms-perspective-origin: 50% 60%;
+  -o-perspective-origin: 50% 60%;
+  perspective-origin: 50% 60%; }
+
 .ball {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  -webkit-transform-style: preserve-3d;
+  background-size: 1344px 100%;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='aa.bmp', sizingMethod='scale');
+  -webkit-animation: move-map 30s infinite linear;
+  -moz-animation: move-map 30s infinite linear;
+  -o-animation: move-map 30s infinite linear;
+  -ms-animation: move-map 30s infinite linear;
+  animation: move-map 30s infinite linear; }
+
+.ball:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: -79px -1px 86px 3px rgba(0, 0, 0, 0.5) inset;
+  z-index: 2; }
+
+.ball:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(0);
+  opacity: 0.3;
+  background: radial-gradient(circle at 50% 80%, #81e8f6, #76deef 10%, #055194 66%, #062745 100%); }
+
+.ball .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+  -webkit-transform: rotateX(90deg) translateZ(-224px);
+  -moz-transform: rotateX(90deg) translateZ(-224px);
+  -ms-transform: rotateX(90deg) translateZ(-224px);
+  -o-transform: rotateX(90deg) translateZ(-224px);
+  transform: rotateX(90deg) translateZ(-224px);
+  z-index: -1; }
+
+@-moz-keyframes move-map {
+  0% {
+    background-position: -1344px 0; }
+  100% {
+    background-position: 0 0; } }
+@-webkit-keyframes move-map {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -849px 0; } }
+@-o-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+  100% {
+    background-position: 0 0; } }
+@-ms-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+  100% {
+    background-position: 0 0; } }
+@keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+  100% {
+    background-position: 0 0; } }
+.balls {
   height: 200px;
   width: 200px;
   position: absolute;
@@ -701,79 +797,58 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   background-color: rgba(255, 255, 255, 0.1);
   transition: all .6s; }
-
-.ball:hover {
-  transform: scale(1.2); }
-
-.ball_box {
-  width: 100%;
-  height: 100%;
-  animation: rotate3d 20s infinite linear; }
-
-.ball div {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: solid 1px #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -50% 0 0 -50%;
-  transform-style: preserve-3d; }
-
-.ball .x1 {
-  transform: rotateY(0); }
-
-.ball .x2 {
-  transform: rotateY(20deg); }
-
-.ball .x3 {
-  transform: rotateY(40deg); }
-
-.ball .x4 {
-  transform: rotateY(60deg); }
-
-.ball .x5 {
-  transform: rotateY(80deg); }
-
-.ball .x6 {
-  transform: rotateY(100deg); }
-
-.ball .x7 {
-  transform: rotateY(120deg); }
-
-.ball .x8 {
-  transform: rotateY(140deg); }
-
-.ball .x9 {
-  transform: rotateY(160deg); }
-
-.ball .y1 {
-  transform: rotateX(90deg) translateZ(75px) scale(0.6); }
-
-.ball .y2 {
-  transform: rotateX(90deg) translateZ(50px) scale(0.8); }
-
-.ball .y3 {
-  transform: rotateX(90deg) translateZ(25px) scale(0.92); }
-
-.ball .y4 {
-  transform: rotateX(90deg) translateZ(10px) scale(0.98); }
-
-.ball .y5 {
-  transform: rotateX(90deg) translateZ(0); }
-
-.ball .y6 {
-  transform: rotateX(90deg) translateZ(-10px) scale(0.98); }
-
-.ball .y7 {
-  transform: rotateX(90deg) translateZ(-25px) scale(0.92); }
-
-.ball .y8 {
-  transform: rotateX(90deg) translateZ(-50px) scale(0.8); }
-
-.ball .y9 {
-  transform: rotateX(90deg) translateZ(-75px) scale(0.6); }
+  .balls:hover {
+    transform: scale(1.2); }
+  .balls .ball_box {
+    width: 100%;
+    height: 100%;
+    animation: rotate3d 20s infinite linear; }
+  .balls div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: solid 1px #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50% 0 0 -50%;
+    transform-style: preserve-3d; }
+  .balls .x1 {
+    transform: rotateY(0); }
+  .balls .x2 {
+    transform: rotateY(20deg); }
+  .balls .x3 {
+    transform: rotateY(40deg); }
+  .balls .x4 {
+    transform: rotateY(60deg); }
+  .balls .x5 {
+    transform: rotateY(80deg); }
+  .balls .x6 {
+    transform: rotateY(100deg); }
+  .balls .x7 {
+    transform: rotateY(120deg); }
+  .balls .x8 {
+    transform: rotateY(140deg); }
+  .balls .x9 {
+    transform: rotateY(160deg); }
+  .balls .y1 {
+    transform: rotateX(90deg) translateZ(75px) scale(0.6); }
+  .balls .y2 {
+    transform: rotateX(90deg) translateZ(50px) scale(0.8); }
+  .balls .y3 {
+    transform: rotateX(90deg) translateZ(25px) scale(0.92); }
+  .balls .y4 {
+    transform: rotateX(90deg) translateZ(10px) scale(0.98); }
+  .balls .y5 {
+    transform: rotateX(90deg) translateZ(0); }
+  .balls .y6 {
+    transform: rotateX(90deg) translateZ(-10px) scale(0.98); }
+  .balls .y7 {
+    transform: rotateX(90deg) translateZ(-25px) scale(0.92); }
+  .balls .y8 {
+    transform: rotateX(90deg) translateZ(-50px) scale(0.8); }
+  .balls .y9 {
+    transform: rotateX(90deg) translateZ(-75px) scale(0.6); }
 
 @keyframes rotate3d {
   0% {
