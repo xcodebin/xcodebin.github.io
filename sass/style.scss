@@ -173,8 +173,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 
-#fh5co-header,
-.fh5co-cover {
+#xco-header,
+.xco-cover {
 	background-color: transparent;
 	background-size: cover;
 	background-attachment: fixed;
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			// border: 1px solid rgba($brand-white,1);
 			@include border-radius(50%);
 		}
-		.fh5co-social-icons {
+		.xco-social-icons {
 			li {
 				a {
 					color: $brand-white;
@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 
-#fh5co-features {
+#xco-features {
 	background: $brand-primary;
 	h2 {
 		color: $brand-white;
@@ -347,33 +347,33 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 
-#fh5co-about,
-#fh5co-resume,
-#fh5co-skills,
-#fh5co-started,
-#fh5co-work,
-#fh5co-blog,
-#fh5co-pricing,
-#fh5co-contact{
+#xco-about,
+#xco-resume,
+#xco-skills,
+#xco-started,
+#xco-work,
+#xco-blog,
+#xco-pricing,
+#xco-contact{
 	padding: 7em 0;
 	clear: both;
 	@media screen and (max-width: $screen-sm) {
 		padding: 3em 0;
 	}
 }
-#fh5co-started{
+#xco-started{
 	border-bottom: none;
 }
 
-.fh5co-bg-color{
+.xco-bg-color{
 	// background: #233142;
 
 }
-.fh5co-bg-dark{
+.xco-bg-dark{
 	background: $brand-bg-dark;
 	background: $brand-primary;
   background-size: cover;
-	.fh5co-heading{
+	.xco-heading{
 		h2{
 			color: $brand-white !important;
 		}
@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-.fh5co-social-icons {
+.xco-social-icons {
 	margin: 0;
 	padding: 0;
 	li {
@@ -432,8 +432,8 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#fh5co-about{
-	.fh5co-social-icons {
+#xco-about{
+	.xco-social-icons {
 		margin: 0;
 		padding: 0;
 		li {
@@ -458,9 +458,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 
-.fh5co-heading {
+.xco-heading {
 	margin-bottom: 5em;
-	&.fh5co-heading-sm {
+	&.xco-heading-sm {
 		margin-bottom: 2em;
 	}
 	h2 {
@@ -873,14 +873,14 @@ h1, h2, h3, h4, h5, h6, figure {
     }
   }
 }
-#fh5co-started {
+#xco-started {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
 	float: left;
 	width: 100%;
-	.fh5co-heading {
+	.xco-heading {
 		margin-bottom: 0;
 		h2 {
 			color: $brand-white;
@@ -908,7 +908,7 @@ h1, h2, h3, h4, h5, h6, figure {
 //PRICING
 
 // BLOG
-.fh5co-blog{
+.xco-blog{
 	width: 100%;
 	float: left;
 	margin-bottom: 40px;
@@ -998,7 +998,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 
-#fh5co-consult{
+#xco-consult{
 	@include flex();
 	@include flexwrap();
 	width: 100%;
@@ -1031,7 +1031,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 }
-.fh5co-video {
+.xco-video {
 	overflow: hidden;
 	@media screen and (max-width: $screen-md){
 		height: 450px;
@@ -1048,7 +1048,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 
-#fh5co-footer {
+#xco-footer {
 	padding: 50px 0;
 	float: left;
 	width: 100%;
@@ -1330,7 +1330,7 @@ input[type="text"] {
    margin: 0px !important;
 }
 
-.fh5co-loader {
+.xco-loader {
 	position: fixed;
 	left: 0px;
 	top: 0px;
