@@ -414,8 +414,8 @@
     <section class="stage">
         <figure class="ball" style="background-image: url('images/skill.jpg')"><span class="shadow"></span></figure>
     </section>
-    <section style="height:300px;">
-        <div style="height:300px;" id="map"></div>
+    <section>
+        <div style="height:400px;" id="map"></div>
     </section>
 </div>
 
@@ -435,9 +435,6 @@
 <script src="js/jquery.stellar.min.js"></script>
 <!-- Easy PieChart -->
 <script src="js/jquery.easypiechart.min.js"></script>
-<!-- Google Map -->
-
-<script src="js/google_map.js"></script>
 
 <!-- Main -->
 <script src="js/main.js"></script>
@@ -447,19 +444,36 @@
 	var map = new BMap.Map("map");    // 创建Map实例
 	var point = new BMap.Point(121.48789949,31.24916171);
 	map.centerAndZoom(point,12);
-
-	var geolocation = new BMap.Geolocation();
-	geolocation.getCurrentPosition(function(r){
-		if(this.getStatus() == BMAP_STATUS_SUCCESS){
-			var mk = new BMap.Marker(r.point);
-			map.addOverlay(mk);
-			map.panTo(r.point);
-			console.info('您的位置：'+r.point.lng+','+r.point.lat);
-		}
-		else {
-			console.info('failed'+this.getStatus());
-		}
-	},{enableHighAccuracy: true})
+	var marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);               // 将标注添加到地图中
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+	// 添加带有定位的导航控件
+	var navigationControl = new BMap.NavigationControl({
+		// 靠左上角位置
+		anchor: BMAP_ANCHOR_TOP_LEFT,
+		// LARGE类型
+		type: BMAP_NAVIGATION_CONTROL_LARGE,
+		// 启用显示定位
+		enableGeolocation: true
+	});
+	map.addControl(navigationControl);
+	// 添加定位控件
+	var geolocationControl = new BMap.GeolocationControl();
+	geolocationControl.addEventListener("locationSuccess", function(e){
+		// 定位成功事件
+		var address = '';
+		address += e.addressComponent.province;
+		address += e.addressComponent.city;
+		address += e.addressComponent.district;
+		address += e.addressComponent.street;
+		address += e.addressComponent.streetNumber;
+		console.info("当前定位地址为：" + address);
+	});
+	geolocationControl.addEventListener("locationError",function(e){
+		// 定位失败事件
+		console.info(e.message);
+	});
+	map.addControl(geolocationControl);
 
 </script>
 </body>
