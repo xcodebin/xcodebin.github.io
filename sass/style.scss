@@ -873,6 +873,38 @@ h1, h2, h3, h4, h5, h6, figure {
     }
   }
 }
+.my-skills{
+  width:100%;
+}
+.ball {height:200px;width:200px;position:absolute;top:86%;left:50%;margin:-100px 0 0 -100px;background-color:rgba(255,255,255,.1);transition:all .6s;}
+.ball:hover {transform:scale(1.2);}
+
+.ball_box {width:100%;height:100%;animation:rotate3d 20s infinite linear;}
+.ball div {width:100%;height:100%;border-radius:100%;border:solid 1px #fff;position:absolute;top:50%;left:50%;margin:-50% 0 0 -50%;transform-style:preserve-3d;}
+.ball .x1 {transform:rotateY(0)}
+.ball .x2 {transform:rotateY(20deg)}
+.ball .x3 {transform:rotateY(40deg)}
+.ball .x4 {transform:rotateY(60deg)}
+.ball .x5 {transform:rotateY(80deg)}
+.ball .x6 {transform:rotateY(100deg)}
+.ball .x7 {transform:rotateY(120deg)}
+.ball .x8 {transform:rotateY(140deg)}
+.ball .x9 {transform:rotateY(160deg)}
+
+.ball .y1 {transform:rotateX(90deg) translateZ(75px) scale(0.60);}
+.ball .y2 {transform:rotateX(90deg) translateZ(50px) scale(0.80);}
+.ball .y3 {transform:rotateX(90deg) translateZ(25px) scale(0.92);}
+.ball .y4 {transform:rotateX(90deg) translateZ(10px) scale(0.98);}
+.ball .y5 {transform:rotateX(90deg) translateZ(0);}
+.ball .y6 {transform:rotateX(90deg) translateZ(-10px) scale(0.98);}
+.ball .y7 {transform:rotateX(90deg) translateZ(-25px) scale(0.92);}
+.ball .y8 {transform:rotateX(90deg) translateZ(-50px) scale(0.80);}
+.ball .y9 {transform:rotateX(90deg) translateZ(-75px) scale(0.60);}
+
+@keyframes rotate3d {
+  0% {transform:rotate(-20deg) rotateX(-20deg) rotateY(0)}
+  100% {transform:rotate(-20deg) rotateX(-20deg) rotateY(360deg)}
+}
 #xco-started {
 	background-size: cover;
 	background-position: center center;
