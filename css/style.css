@@ -696,9 +696,9 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 200px;
   width: 200px;
   position: absolute;
-  top: 86%;
-  left: 50%;
-  margin: -100px 0 0 -100px;
+  top: 5%;
+  right: 5%;
+  margin: 0;
   background-color: rgba(255, 255, 255, 0.1);
   transition: all .6s; }
 
