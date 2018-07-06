@@ -710,9 +710,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .ball {
   position: absolute;
   left: 50%;
-  right: 0;
   top: 50%;
-  bottom: 0;
   display: inline-block;
   transform: translate(-50%, -50%);
   width: 450px;
@@ -722,11 +720,11 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: 1344px 100%;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='aa.bmp', sizingMethod='scale');
-  -webkit-animation: move-map 30s infinite linear;
-  -moz-animation: move-map 30s infinite linear;
-  -o-animation: move-map 30s infinite linear;
-  -ms-animation: move-map 30s infinite linear;
-  animation: move-map 30s infinite linear; }
+  -webkit-animation: move-map 300s infinite linear;
+  -moz-animation: move-map 300s infinite linear;
+  -o-animation: move-map 300s infinite linear;
+  -ms-animation: move-map 300s infinite linear;
+  animation: move-map 300s infinite linear; }
 
 .ball:before {
   content: "";
@@ -765,27 +763,27 @@ h1, h2, h3, h4, h5, h6, figure {
 
 @-moz-keyframes move-map {
   0% {
-    background-position: -1344px 0; }
+    background-position: -13440px 0; }
   100% {
     background-position: 0 0; } }
 @-webkit-keyframes move-map {
   0% {
     background-position: 0 0; }
   100% {
-    background-position: -849px 0; } }
+    background-position: -13440px 0; } }
 @-o-keyframes move-map {
   0% {
-    background-position: -849px 0; }
+    background-position: -13440px 0; }
   100% {
     background-position: 0 0; } }
 @-ms-keyframes move-map {
   0% {
-    background-position: -849px 0; }
+    background-position: -13440px 0; }
   100% {
     background-position: 0 0; } }
 @keyframes move-map {
   0% {
-    background-position: -849px 0; }
+    background-position: -13440px 0; }
   100% {
     background-position: 0 0; } }
 .balls {
