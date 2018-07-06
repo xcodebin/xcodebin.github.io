@@ -720,11 +720,11 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: 1344px 100%;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='aa.bmp', sizingMethod='scale');
-  -webkit-animation: move-map 300s infinite linear;
-  -moz-animation: move-map 300s infinite linear;
-  -o-animation: move-map 300s infinite linear;
-  -ms-animation: move-map 300s infinite linear;
-  animation: move-map 300s infinite linear; }
+  -webkit-animation: move-map 250s infinite linear;
+  -moz-animation: move-map 250s infinite linear;
+  -o-animation: move-map 250s infinite linear;
+  -ms-animation: move-map 250s infinite linear;
+  animation: move-map 250s infinite linear; }
 
 .ball:before {
   content: "";
